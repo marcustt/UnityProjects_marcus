@@ -1,0 +1,75 @@
+경마게임 
+
+맵 구성 
+1. 달리기를 할 트랙
+2. 1,2,3등을 위한 단상
+
+게임플레이:
+GameObject 5개를 랜덤한 속도롤 전진하게 하여 , 
+결승점에 도달할 경우 
+게임을 끝내고 1,2,3등은 1,2,3등 단상에 각각 위치 시킨다. 
+
+논리 세분화 
+
+1. 단상에 올라갈 1,2,3등을 저장할 배열이 필요 
+2. 트랙을 만들고 결승점을 lastPoint  변수로 저장
+3. 말 클래스를 만들고 5개의 오브젝트를 만든다
+4. 랜덤한 거리를 각 말클래스에 더하고 결승점을 도착했는지 확인 도착하면 단상배열에 저장후 달리기 멈춤
+5. 3등까지 들어오면 게임을 멈추고 배열에서 1,2,3등을 꺼내 확인시킨다
+
+//샘 모드 
+1. GameObject 5개를 만든다. 
+2. GameObject 5개를 동시에 전진시킨다. 
+3. 전진시에 각 GameObject 는 랜덤한 속도로 움직인다. 
+4. 전진시에 GameObject 의 위치가 결승점을 넘었을 경우 등수에 올린다. 
+5. GameObject 5개가 모두 결승점을 넘었을 경우 달리기를 중단한다. 
+5. GameObject 중 1,2,3등을 한 GameObject 는 각각 단상의 1,2,3등에 위치시킨다. 
+
+
+string raceNumber[]  = new string[3];
+float lastPoint = 100f;
+class horse()
+{
+  string name;
+  float totalMeter = 0f;
+  함수 런()
+  { 랜덤한 거리를 1초동안 달려서 
+    totalMeter 에 저장한다}
+}
+horse raceHorse[] = new horse[5];
+for (int i = 0; i<5; i++)
+   말이름을 넣어준다. 
+
+while(3등이 들어올때까지)
+{
+  int horesNum  = o;
+  for(int i =0; i < raceHorse.Lenth; i++)
+    raceHorse[i]. 런함수를 호출한다;
+  if (결승점 지나면 배열에 저장한다)
+}
+
+
+//샘모드 
+
+GameObject 리스트에 GameObject 5개를 대입
+GameObject 등수 리스트 생성
+
+if(게임진행중일 경우만 for문 돌리기)
+	foreach문 ( GameObject 리스트를 반복)
+	{
+    		GameObject.Posion += 랜덤속도;
+		if(GameObject.Position > 결승점)
+		등수리스트.Add(GameObject);
+	}
+	if(등수리스트.count > 5)
+		게임끝;
+		등수리스트[0].Position =1등 단상위치;
+		등수리스트[1].Position = 2등 단상위치;
+		등수리스트[2].Position = 3등 단상위치;
+	
+}
+
+    
+
+  
+   
